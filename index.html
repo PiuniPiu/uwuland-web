@@ -36,11 +36,11 @@
 					<div id="main">
 							<section id="one">
 								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
+									<img src="images/bg01.jpg" alt="" />
 								</div>
 								<div class="container">
 									<header class="major">
-										<h2>AoiiMipMC</h2>
+										<h2>AoiiMipMC | Web oficial</h2>
 									</header>
 									<p>Esta página web está dedicada al servidor de Minecraft de AoiiVT. Aquí podrás encontrar toda la información de como unirte al servidor, obtener datos sobre el número de jugadores que están conectados, el ping, el MOTD...</p>
 									<p>Este servidor fue creado para toda la comunidad de AoiiVT para que pudiesen estar con ella jugando, para que se formen nuevas amistades pero sobre todo, para que podais pasar tiempo con vuestra VTuber Española favorita!</p>
@@ -57,27 +57,32 @@
 							<section id="three">
 								<div class="container">
 										<h3>Información</h3>
+										<h5>LOS DATOS SE ACTUALIZAN CADA 5 MIN!!!</h5>
 										<div class="server-status">
-											El servidor está actualmente <span class="server-online"></span>!
-										</div>
-										<div class="server-status">
+											El servidor está actualmente <span class="server-online"></span>! 
+											<br></br>
+											<span class="server-motd"></span>
+											<br></br>
 											Únete junto a otras <span class="server-nowplayers"></span> personas!
-										</div>
-										<div class="server-status">
-											Actualmente hay <span class="server-nowplayers"></span> personas!
-										</div>
-										<div class="server-status">
+											<br></br>
+											Actualmente hay <span class="server-slots"></span> slots disponibles. Estos se irán aumentando con el paso del tiempo.
+											<br></br>
+											Usamos <span class="server-software"></span> como software del servidor para asegurar la máxima optimización del server.
 										</div>
 										<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
 										<script>
-											MinecraftAPI.getServerStatus('Alexdevuwu.aternos.me', {
-												port: 54825
+											MinecraftAPI.getServerStatus('mc.aoiivt.ml', {
+												port: 8014
 											}, function (err, status) {
 												if (err) {
-													return document.querySelector('.server-status').innerHTML = 'Error loading status';
+													return document.querySelector('.server-status').innerHTML = 'Ha habido un error cargando los datos. Esto se puede deber a que el servidor está offline.';
 												}
 												document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
-												document.querySelector('.server-nowplayers').innerHTML = status.motd;
+												document.querySelector('.server-nowplayers').innerHTML = status.players.now;
+												document.querySelector('.server-slots').innerHTML = status.players.max;
+												document.querySelector('.server-software').innerHTML = status.server.name;
+												document.querySelector('.server-motd').innerHTML = status.motd;
+												document.querySelector('.server-onlinetime').innerHTML = status.last_online;
 											});
 										</script>
 									</div>
@@ -87,12 +92,11 @@
 					<section id="footer">
 						<div class="container">
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; AoiiMipMC.</li>
 							</ul>
 						</div>
 					</section>
 			</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
