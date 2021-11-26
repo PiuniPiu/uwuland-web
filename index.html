@@ -75,7 +75,7 @@
 												port: 8014
 											}, function (err, status) {
 												if (err) {
-													return document.querySelector('.server-status').innerHTML = 'Ha habido un error cargando los datos. Esto se puede deber a que el servidor está offline.';
+													return document.querySelector('.server-status').innerHTML = 'El servidor está actualmente offline.';
 												}
 												document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
 												document.querySelector('.server-nowplayers').innerHTML = status.players.now;
