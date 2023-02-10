@@ -1,109 +1,115 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>AoiiMipMC</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css"/>
-	</head>
-	<body class="is-preload">
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/descarga.png" alt="" /></span>
-					<h1 id="logo"><a href="#">AoiiMipMC</a></h1>
-					<p>Un servidor de Minecraft Java 1.17<br />
-					creado para la comunidad de AoiiVT</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">Sobre el servidor</a></li>
-						<li><a href="#two">Como unirte</a></li>
-						<li><a href="#three">Estado del servidor</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://twitter.com/AoiiMipMC" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="https://github.com/AoiiMipVT" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:​​aoiimipmc@alexdevuwu.tk" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-					<div id="main">
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/bg01.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h2>AoiiMipMC | Web oficial</h2>
-									</header>
-									<p>Esta página web está dedicada al servidor de Minecraft de AoiiVT. Aquí podrás encontrar toda la información de como unirte al servidor, obtener datos sobre el número de jugadores que están conectados, el ping, el MOTD...</p>
-									<p>Este servidor fue creado para toda la comunidad de AoiiVT para que pudiesen estar con ella jugando, para que se formen nuevas amistades pero sobre todo, para que podais pasar tiempo con vuestra VTuber Española favorita!</p>
-								</div>
-							</section>
-							<section id="two">
-								<div class="container">
-									<h3>¿Como me puedo unir?</h3>
-									<p>Por favor, lee <a href="https://twitter.com/AoiiMipMC/status/1535582548977393664?t=VTyi_J6rfPoS4SJp-X99NA&s=19">este twit para enterarte de todos los detalles y del registro</a></p>
-									<p>Si tienes algún problema con ello, por favor, envíanos un email a <a href="mailto:aoiimipmc@alexdevuwu.tk">este correo</a> y intentaremos ayudarte con el proceso o arreglar tu problema.</p>
-								</div>
-							</section>
-							<section id="three">
-								<div class="container">
-										<h3>Información</h3>
-										<h5>LOS DATOS SE ACTUALIZAN CADA 5 MIN!!!</h5>
-										<div class="server-status">
-											El servidor está actualmente <span class="server-online"></span>! 
-											<br></br>
-											<span class="server-motd"></span>
-											<br></br>
-											Únete junto a otras <span class="server-nowplayers"></span> personas!
-											<br></br>
-											Actualmente hay <span class="server-slots"></span> slots disponibles. Estos se irán aumentando con el paso del tiempo.
-											<br></br>
-											Usamos <span class="server-software"></span> como software del servidor para asegurar la máxima optimización del server.
-										</div>
-										<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
-										<script>
-											MinecraftAPI.getServerStatus('mine.aoiivt.ml', {
-												port: 25565
-											}, function (err, status) {
-												if (err) {
-													return document.querySelector('.server-status').innerHTML = 'El servidor está actualmente offline.';
-												}
-												document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
-												document.querySelector('.server-nowplayers').innerHTML = status.players.now;
-												document.querySelector('.server-slots').innerHTML = status.players.max;
-												document.querySelector('.server-software').innerHTML = status.server.name;
-												document.querySelector('.server-motd').innerHTML = status.motd;
-												document.querySelector('.server-onlinetime').innerHTML = status.last_online;
-											});
-										</script>
-									</div>
-							</section>
-					</div>
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>AoiiMipMC</li>
-							</ul>
-						</div>
-					</section>
+<head>
+	<title>UwULand</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="images/descarga.png" alt="" /></span>
+			<h1 id="logo"><a href="#">UwULand</a></h1>
+			<p>Un servidor de Minecraft Java y Bedrock en la versión 1.19<br />
+				creado para los subs de <a href="https://twitch.tv/piunipiu">PiuniPiu</a></p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#one" class="active">Sobre el servidor</a></li>
+				<li><a href="#two">Como unirte</a></li>
+				<li><a href="#three">Estado del servidor</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://twitter.com/uwuland_server" class="icon brands fa-twitter"><span
+							class="label">Twitter</span></a></li>
+				<li><a href="https://twitch.tv/piunipiu" class="icon brands fa-twitch"><span
+							class="label">Twitch</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<div id="main">
+			<div class="image main" data-position="center">
+				<img src="images/bg01.jpg" alt="" />
 			</div>
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://code.jquery.com/jquery-3.2.1.min.js%22%3E</script>
+			<section id="one">
+				<div class="container">
+					<p>Esta página web está dedicada al servidor de Minecraft de PiuniPiu. Aquí podrás encontrar toda la
+						información acerca del servidor (como unirte, el estado...)</p>
+					<p>Este servidor fue creado para los subs de Twitch de la linda de Piuni, a modo de recompensa por
+						estar suscritos.
+						Además, Piuni también estará jugando en él, con lo que tienes la posibilidad de jugar con ella y
+						pasar tiempo con la mejor VTuber Española!
+					</p>
+				</div>
+			</section>
+			<section id="two">
+				<div class="container">
+					<h3>¿Como me puedo unir?</h3>
+					<p></p>
+				</div>
+			</section>
+			<section id="three">
+				<div class="container">
+					<h3>Información</h3>
+					<h5>LOS DATOS SE ACTUALIZAN CADA 5 MIN!!!</h5>
+					<div class="server-status">
+						El servidor está actualmente <span class="server-online"></span>!
+						<br></br>
+						<span class="server-motd"></span>
+						<br></br>
+						Únete junto a otras <span class="server-nowplayers"></span> personas!
+						<br></br>
+						Actualmente hay <span class="server-slots"></span> slots disponibles. Estos se irán aumentando
+						con el paso del tiempo.
+						<br></br>
+						Usamos <span class="server-software"></span> como software del servidor para asegurar la máxima
+						optimización del server.
+					</div>
+					<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+					<script>
+						MinecraftAPI.getServerStatus('mine.aoiivt.ml', {
+							port: 25565
+						}, function (err, status) {
+							if (err) {
+								return document.querySelector('.server-status').innerHTML = 'El servidor está actualmente offline.';
+							}
+							document.querySelector('.server-online').innerHTML = status.online ? 'online' : 'offline';
+							document.querySelector('.server-nowplayers').innerHTML = status.players.now;
+							document.querySelector('.server-slots').innerHTML = status.players.max;
+							document.querySelector('.server-software').innerHTML = status.server.name;
+							document.querySelector('.server-motd').innerHTML = status.motd;
+							document.querySelector('.server-onlinetime').innerHTML = status.last_online;
+						});
+					</script>
+				</div>
+			</section>
+		</div>
+		<!-- Footer -->
+		<section id="footer">
+			<div class="container">
+				<ul class="copyright">
+					<li>AoiiMipMC</li>
+				</ul>
+			</div>
+		</section>
+	</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js%22%3E</script>
 	</body>
 </html>
